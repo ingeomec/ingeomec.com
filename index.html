@@ -1,116 +1,133 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ingeomec</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>INGEOMEC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet" />
   <style>
-    body { margin: 0; font-family: Arial, sans-serif; color: #333; }
-    header { background: #990000; color: white; padding: 1.5rem 2rem; }
-    nav ul { list-style: none; padding: 0; display: flex; gap: 1rem; }
-    nav a { color: white; text-decoration: none; font-weight: bold; }
-    section { padding: 2rem; }
-    .gray-bg { background-color: #f2f2f2; }
-    footer { background: #333; color: white; text-align: center; padding: 1rem; }
-    h1, h2 { color: #990000; }
-    .container { max-width: 1000px; margin: auto; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #8b0000, #4d4d4d);
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+    header img {
+      max-width: 250px;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+    header h1 {
+      font-size: 2.5em;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    section h2 {
+      color: #8b0000;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    .about-imgs img, .services img {
+      width: 100%;
+      max-width: 500px;
+      margin: 10px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .about-imgs img:hover, .services img:hover {
+      transform: scale(1.05);
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .service {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+    .service:hover {
+      transform: translateY(-5px);
+    }
+    .clients img {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 12px;
+    }
+    footer {
+      background: #4d4d4d;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="container">
-      <h1>Ingeomec</h1>
-      <nav>
-        <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#nosotros">Nosotros</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
+    <img src="logo.jpeg" alt="Logo INGEOMEC" />
+    <h1>Bienvenidos a INGEOMEC</h1>
+    <p>Soluciones integrales en geotecnia, arquitectura, ingeniería civil y asesoría jurídica.</p>
   </header>
 
-  <section id="inicio" class="gray-bg">
-    <div class="container">
-      <h2>Bienvenido a Ingeomec</h2>
-      <p>Soluciones integrales en geotecnia, arquitectura, ingeniería civil y asesoría jurídica.</p>
-    </div>
-  </section>
-
   <section id="nosotros">
-    <div class="container">
-      <h2>Sobre Nosotros</h2>
-      <p>Ingeomec es una empresa multidisciplinaria que brinda servicios técnicos y legales con enfoque profesional y responsabilidad social. Nuestro equipo está conformado por expertos en diferentes áreas que garantizan calidad y cumplimiento.</p>
+    <h2>Sobre Nosotros</h2>
+    <p>Somos INGEOMEC, un equipo interdisciplinario comprometido con ofrecer soluciones técnicas, legales y estructurales de alta calidad en el ámbito de la ingeniería civil, arquitectura, geotecnia y asesoría jurídica. Nos destacamos por la seriedad, compromiso y excelencia en cada proyecto que desarrollamos.</p>
+    <div class="about-imgs">
+      <img src="arquitectura1.jpeg" alt="Arquitectura 1" />
+      <img src="arquitectura2.jpeg" alt="Arquitectura 2" />
     </div>
   </section>
 
-  <section id="servicios" class="gray-bg">
-    <div class="container">
-      <h2>Servicios</h2>
-      <div class="grid">
-        <div>
-          <h3>Geotecnia</h3>
-          <ul>
-            <li>Estudio de suelos para edificaciones (SPT)</li>
-            <li>Estudio de suelos para placa huellas y pavimentos</li>
-            <li>Estudio de suelos para alcantarillado y acueducto</li>
-            <li>Estudio de suelos para sistemas de contención</li>
-            <li>Estabilidad de taludes</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Arquitectura</h3>
-          <ul>
-            <li>Diseños arquitectónicos de vivienda y urbanizaciones</li>
-            <li>Diseño geométrico de vías</li>
-            <li>Diseño urbanístico</li>
-            <li>Modelado y render con tecnología BIM</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Ingeniería Civil</h3>
-          <ul>
-            <li>Diseño y análisis estructural (NSR-10)</li>
-            <li>Patología de edificaciones</li>
-            <li>Análisis de vulnerabilidad sísmica</li>
-            <li>Mantenimiento de edificaciones</li>
-            <li>Levantamientos topográficos</li>
-            <li>Diseño de instalaciones eléctricas e hidrosanitarias</li>
-            <li>Presupuesto, programación y construcción de obra</li>
-            <li>Asesoría de obra</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Jurídica</h3>
-          <ul>
-            <li>Legalización de escrituras</li>
-            <li>Aclaración de áreas</li>
-            <li>Subdivisiones rurales y urbanas</li>
-            <li>Propiedad horizontal</li>
-            <li>Compra venta de inmuebles</li>
-          </ul>
-        </div>
+  <section id="servicios">
+    <h2>Nuestros Servicios</h2>
+    <div class="services-grid">
+      <div class="service">
+        <h3>Geotecnia</h3>
+        <img src="geotecnia.jpeg" alt="Geotecnia" />
+        <p>Estudios de suelos, estabilidad de taludes, y soluciones de contención.</p>
+      </div>
+      <div class="service">
+        <h3>Arquitectura</h3>
+        <img src="arquitectura.jpeg" alt="Arquitectura" />
+        <p>Diseño arquitectónico, urbanismo y visualización con tecnología BIM.</p>
+      </div>
+      <div class="service">
+        <h3>Ingeniería Civil</h3>
+        <img src="ingenieria_civil.jpeg" alt="Ingeniería Civil" />
+        <p>Análisis estructural, patología, instalaciones, presupuesto y ejecución de obra.</p>
+      </div>
+      <div class="service">
+        <h3>Asesoría Jurídica</h3>
+        <img src="juridica.jpeg" alt="Asesoría Jurídica" />
+        <p>Legalización, subdivisiones, propiedad horizontal, compra y venta de predios.</p>
       </div>
     </div>
   </section>
 
-  <section id="contacto">
-    <div class="container">
-      <h2>Contacto</h2>
-      <p>¿Deseas trabajar con nosotros o cotizar un proyecto? Contáctanos a través del siguiente formulario:</p>
-      <form action="https://formsubmit.co/tu-correo@ejemplo.com" method="POST">
-        <input type="text" name="name" placeholder="Nombre" required><br><br>
-        <input type="email" name="email" placeholder="Correo electrónico" required><br><br>
-        <textarea name="message" placeholder="Mensaje" rows="5" required></textarea><br><br>
-        <button type="submit">Enviar</button>
-      </form>
-    </div>
+  <section class="clients">
+    <h2>Clientes Satisfechos</h2>
+    <img src="clientes.jpeg" alt="Clientes felices" />
   </section>
 
   <footer>
-    <p>&copy; 2025 Ingeomec. Todos los derechos reservados.</p>
+    <p>Contacto: ingeomec.contacto@gmail.com | Tel: 312-000-0000</p>
+    <p>&copy; 2025 INGEOMEC. Todos los derechos reservados.</p>
   </footer>
 </body>
 </html>
