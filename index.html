@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingeomec</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; color: #333; }
+    header { background: #990000; color: white; padding: 1.5rem 2rem; }
+    nav ul { list-style: none; padding: 0; display: flex; gap: 1rem; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    section { padding: 2rem; }
+    .gray-bg { background-color: #f2f2f2; }
+    footer { background: #333; color: white; text-align: center; padding: 1rem; }
+    h1, h2 { color: #990000; }
+    .container { max-width: 1000px; margin: auto; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Ingeomec</h1>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="inicio" class="gray-bg">
+    <div class="container">
+      <h2>Bienvenido a Ingeomec</h2>
+      <p>Soluciones integrales en geotecnia, arquitectura, ingeniería civil y asesoría jurídica.</p>
+    </div>
+  </section>
+
+  <section id="nosotros">
+    <div class="container">
+      <h2>Sobre Nosotros</h2>
+      <p>Ingeomec es una empresa multidisciplinaria que brinda servicios técnicos y legales con enfoque profesional y responsabilidad social. Nuestro equipo está conformado por expertos en diferentes áreas que garantizan calidad y cumplimiento.</p>
+    </div>
+  </section>
+
+  <section id="servicios" class="gray-bg">
+    <div class="container">
+      <h2>Servicios</h2>
+      <div class="grid">
+        <div>
+          <h3>Geotecnia</h3>
+          <ul>
+            <li>Estudio de suelos para edificaciones (SPT)</li>
+            <li>Estudio de suelos para placa huellas y pavimentos</li>
+            <li>Estudio de suelos para alcantarillado y acueducto</li>
+            <li>Estudio de suelos para sistemas de contención</li>
+            <li>Estabilidad de taludes</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Arquitectura</h3>
+          <ul>
+            <li>Diseños arquitectónicos de vivienda y urbanizaciones</li>
+            <li>Diseño geométrico de vías</li>
+            <li>Diseño urbanístico</li>
+            <li>Modelado y render con tecnología BIM</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Ingeniería Civil</h3>
+          <ul>
+            <li>Diseño y análisis estructural (NSR-10)</li>
+            <li>Patología de edificaciones</li>
+            <li>Análisis de vulnerabilidad sísmica</li>
+            <li>Mantenimiento de edificaciones</li>
+            <li>Levantamientos topográficos</li>
+            <li>Diseño de instalaciones eléctricas e hidrosanitarias</li>
+            <li>Presupuesto, programación y construcción de obra</li>
+            <li>Asesoría de obra</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Jurídica</h3>
+          <ul>
+            <li>Legalización de escrituras</li>
+            <li>Aclaración de áreas</li>
+            <li>Subdivisiones rurales y urbanas</li>
+            <li>Propiedad horizontal</li>
+            <li>Compra venta de inmuebles</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="container">
+      <h2>Contacto</h2>
+      <p>¿Deseas trabajar con nosotros o cotizar un proyecto? Contáctanos a través del siguiente formulario:</p>
+      <form action="https://formsubmit.co/tu-correo@ejemplo.com" method="POST">
+        <input type="text" name="name" placeholder="Nombre" required><br><br>
+        <input type="email" name="email" placeholder="Correo electrónico" required><br><br>
+        <textarea name="message" placeholder="Mensaje" rows="5" required></textarea><br><br>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ingeomec. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
