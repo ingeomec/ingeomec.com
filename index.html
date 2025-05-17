@@ -12,54 +12,54 @@
       background-color: #f9f9f9;
       color: #333;
     }
+
     header {
       background: linear-gradient(to right, #8b0000, #4d4d4d);
       color: white;
-      padding: 100px 20px;
+      padding: 60px 20px 100px;
       text-align: center;
+      position: relative;
     }
+
+    .contacto-wsp {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 1em;
+    }
+
+    .contacto-wsp a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
     header img {
-      max-width: 250px;
+      max-width: 300px;
       margin-bottom: 20px;
       animation: fadeIn 2s ease-in-out;
     }
+
     header h1 {
       font-size: 2.5em;
     }
+
     section {
       padding: 60px 20px;
       max-width: 1200px;
       margin: auto;
     }
+
     section h2 {
       color: #8b0000;
       font-size: 2em;
       margin-bottom: 20px;
     }
 
-    /* Contenedor para texto e imágenes, ajusta ancho máximo */
     .contenedor-texto {
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
-    }
-
-    /* Imágenes dentro del contenedor no exceden el ancho */
-    .contenedor-texto img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 10px 0;
-      border-radius: 10px;
-      transition: transform 0.3s;
-    }
-    .contenedor-texto img:hover {
-      transform: scale(1.05);
-    }
-
-    /* Quitar imagen en Sobre Nosotros */
-    #nosotros img {
-      display: none;
     }
 
     .services-grid {
@@ -69,6 +69,7 @@
       max-width: 1200px;
       margin: 0 auto;
     }
+
     .service {
       background: #fff;
       padding: 20px;
@@ -76,9 +77,11 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s;
     }
+
     .service:hover {
       transform: translateY(-5px);
     }
+
     .service img {
       width: 100%;
       max-width: 500px;
@@ -86,23 +89,42 @@
       border-radius: 10px;
       transition: transform 0.3s;
     }
+
     .service img:hover {
       transform: scale(1.05);
     }
 
-    .clients img {
-      width: 100%;
-      max-width: 700px;
-      border-radius: 12px;
-      display: block;
-      margin: 0 auto;
+    /* Clientes satisfechos */
+    .clientes-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
     }
+
+    .clientes-imgs {
+      flex: 1 1 50%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .clientes-imgs img {
+      width: calc(50% - 10px);
+      border-radius: 10px;
+    }
+
+    .clientes-texto {
+      flex: 1 1 40%;
+    }
+
     footer {
       background: #4d4d4d;
       color: white;
       text-align: center;
       padding: 20px;
     }
+
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -111,6 +133,9 @@
 </head>
 <body>
   <header>
+    <div class="contacto-wsp">
+      <a href="https://wa.me/message/ZMHL2J4CP5HTN1" target="_blank">CONTÁCTANOS: 3105352635</a>
+    </div>
     <img src="logo.jpeg" alt="Logo INGEOMEC" />
     <h1>Bienvenidos a INGEOMEC</h1>
     <p>Soluciones integrales en geotecnia, arquitectura, ingeniería civil y asesoría jurídica.</p>
@@ -119,7 +144,6 @@
   <section id="nosotros" class="contenedor-texto">
     <h2>Sobre Nosotros</h2>
     <p>Somos INGEOMEC, un equipo interdisciplinario comprometido con ofrecer soluciones técnicas, legales y estructurales de alta calidad en el ámbito de la ingeniería civil, arquitectura, geotecnia y asesoría jurídica. Nos destacamos por la seriedad, compromiso y excelencia en cada proyecto que desarrollamos.</p>
-    <!-- Imagenes removidas según tu indicación -->
   </section>
 
   <section id="servicios" class="contenedor-texto">
@@ -150,7 +174,17 @@
 
   <section class="clients contenedor-texto">
     <h2>Clientes Satisfechos</h2>
-    <img src="clientes_satisfechos.jpeg" alt="Clientes felices" />
+    <div class="clientes-flex">
+      <div class="clientes-imgs">
+        <img src="cliente1.jpeg" alt="Cliente 1" />
+        <img src="cliente2.jpeg" alt="Cliente 2" />
+        <img src="cliente3.jpeg" alt="Cliente 3" />
+        <img src="cliente4.jpeg" alt="Cliente 4" />
+      </div>
+      <div class="clientes-texto">
+        <p>En INGEOMEC nos enorgullece contar con una amplia trayectoria de proyectos exitosos que han dejado satisfechos a nuestros clientes. Nuestro compromiso con la excelencia técnica, la puntualidad y el cumplimiento normativo se refleja en la confianza que empresas, entidades gubernamentales y particulares depositan en nosotros. Cada imagen representa una experiencia positiva, un objetivo cumplido y un cliente satisfecho.</p>
+      </div>
+    </div>
   </section>
 
   <footer>
