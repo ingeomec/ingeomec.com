@@ -7,90 +7,57 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --primario: #c1227D;
-      --secundario: #2f2f2f;
+      --primario: #c10000; /* Rojo fuerte */
+      --secundario: #2f2f2f; /* Gris oscuro */
     }
-
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
       background-color: #f9f9f9;
       color: #333;
     }
-
     header {
       background: linear-gradient(to right, var(--primario), var(--secundario));
       color: white;
-      padding: 40px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      padding: 100px 20px 60px;
+      text-align: center;
       position: relative;
     }
-
-    .contacto-link {
+    .contacto-header {
       position: absolute;
-      top: 20px;
+      top: 15px;
       left: 20px;
-      font-size: 1em;
+      color: white;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+    .contacto-header a {
       color: white;
       text-decoration: none;
-      background-color: transparent;
-      padding: 5px 10px;
-      border: 2px solid white;
-      border-radius: 5px;
     }
-
-    .contacto-link:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-
     header img {
-      max-width: 320px;
+      max-width: 300px;
       margin-bottom: 20px;
       animation: fadeIn 2s ease-in-out;
     }
-
     header h1 {
       font-size: 2.8em;
-      margin: 10px 0;
     }
-
     section {
       padding: 60px 20px;
       max-width: 1200px;
       margin: auto;
     }
-
     section h2 {
       color: var(--primario);
       font-size: 2em;
       margin-bottom: 20px;
     }
-
-    .contenedor-texto img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 10px 0;
-      border-radius: 10px;
-      transition: transform 0.3s;
-    }
-
-    .contenedor-texto img:hover {
-      transform: scale(1.05);
-    }
-
-    #nosotros img {
-      display: none;
-    }
-
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 30px;
     }
-
     .service {
       background: #fff;
       padding: 20px;
@@ -98,50 +65,43 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s;
     }
-
     .service:hover {
       transform: translateY(-5px);
     }
-
     .service img {
       width: 100%;
       max-width: 500px;
-      margin: 10px 0;
       border-radius: 10px;
       transition: transform 0.3s;
     }
-
     .service img:hover {
       transform: scale(1.05);
     }
 
-    .clients-grid {
+    /* Clientes */
+    .clients {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
+      align-items: flex-start;
     }
-
-    .clients-images {
-      flex: 1 1 50%;
-      display: flex;
-      flex-wrap: wrap;
+    .clients-imgs {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 10px;
     }
-
-    .clients-images img {
-      width: 48%;
+    .clients-imgs img {
+      width: 100%;
       border-radius: 8px;
     }
-
     .clients-text {
-      flex: 1 1 45%;
-      display: flex;
-      align-items: center;
+      flex: 1;
+      padding: 10px 20px;
     }
-
     .clients-text p {
       font-size: 1.1em;
-      line-height: 1.6;
+      color: #444;
     }
 
     footer {
@@ -158,20 +118,21 @@
   </style>
 </head>
 <body>
-
   <header>
-    <a class="contacto-link" href="https://wa.me/message/ZMHL2J4CP5HTN1" target="_blank">CONTÁCTANOS<br>3105352635</a>
+    <div class="contacto-header">
+      <a href="https://wa.me/message/ZMHL2J4CP5HTN1" target="_blank">CONTÁCTANOS: 3105352635</a>
+    </div>
     <img src="logo.jpeg" alt="Logo INGEOMEC" />
     <h1>Bienvenidos a INGEOMEC</h1>
     <p>Soluciones integrales en geotecnia, arquitectura, ingeniería civil y asesoría jurídica.</p>
   </header>
 
-  <section id="nosotros" class="contenedor-texto">
+  <section id="nosotros">
     <h2>Sobre Nosotros</h2>
     <p>Somos INGEOMEC, un equipo interdisciplinario comprometido con ofrecer soluciones técnicas, legales y estructurales de alta calidad en el ámbito de la ingeniería civil, arquitectura, geotecnia y asesoría jurídica. Nos destacamos por la seriedad, compromiso y excelencia en cada proyecto que desarrollamos.</p>
   </section>
 
-  <section id="servicios" class="contenedor-texto">
+  <section id="servicios">
     <h2>Nuestros Servicios</h2>
     <div class="services-grid">
       <div class="service">
@@ -197,20 +158,16 @@
     </div>
   </section>
 
-  <section class="clients contenedor-texto">
-    <h2>Clientes Satisfechos</h2>
-    <div class="clients-grid">
-      <div class="clients-images">
-        <img src="cliente1.jpeg" alt="Cliente satisfecho 1" />
-        <img src="cliente2.jpeg" alt="Cliente satisfecho 2" />
-        <img src="cliente3.jpeg" alt="Cliente satisfecho 3" />
-        <img src="cliente4.jpeg" alt="Cliente satisfecho 4" />
-      </div>
-      <div class="clients-text">
-        <p>
-          A lo largo de nuestra trayectoria, hemos tenido el privilegio de trabajar con una amplia gama de clientes que hoy respaldan nuestra calidad y profesionalismo. Cada proyecto ha sido ejecutado con un compromiso firme hacia la excelencia, generando resultados satisfactorios y relaciones duraderas. Su satisfacción es nuestro mayor aval.
-        </p>
-      </div>
+  <section class="clients">
+    <div class="clients-imgs">
+      <img src="cliente1.jpeg" alt="Cliente 1" />
+      <img src="cliente2.jpeg" alt="Cliente 2" />
+      <img src="cliente3.jpeg" alt="Cliente 3" />
+      <img src="cliente4.jpeg" alt="Cliente 4" />
+    </div>
+    <div class="clients-text">
+      <h2>Clientes Satisfechos</h2>
+      <p>En INGEOMEC, la satisfacción del cliente es nuestro mayor logro. Hemos trabajado con decenas de empresas y particulares, quienes han valorado la calidad técnica, el cumplimiento y el profesionalismo de nuestros servicios. Nuestra experiencia se refleja en cada proyecto exitoso que realizamos.</p>
     </div>
   </section>
 
@@ -218,6 +175,5 @@
     <p>Contacto: ingeomec.contacto@gmail.com | Tel: 3105352635</p>
     <p>&copy; 2025 INGEOMEC. Todos los derechos reservados.</p>
   </footer>
-
 </body>
 </html>
