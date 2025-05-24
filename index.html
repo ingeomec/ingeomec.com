@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -7,8 +7,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --primario: #c10000; /* Rojo fuerte */
-      --secundario: #2f2f2f; /* Gris oscuro */
+      --primario: #c10000;
+      --secundario: #2f2f2f;
     }
     body {
       margin: 0;
@@ -42,6 +42,20 @@
     }
     header h1 {
       font-size: 2.8em;
+    }
+    .cta-button {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #c10000;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #a00000;
     }
     section {
       padding: 60px 20px;
@@ -77,8 +91,6 @@
     .service img:hover {
       transform: scale(1.05);
     }
-
-    /* Clientes */
     .clients {
       display: flex;
       flex-wrap: wrap;
@@ -103,14 +115,12 @@
       font-size: 1.1em;
       color: #444;
     }
-
     footer {
       background: var(--secundario);
       color: white;
       text-align: center;
       padding: 20px;
     }
-
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -125,6 +135,7 @@
     <img src="logo.jpeg" alt="Logo INGEOMEC" />
     <h1>Bienvenidos a INGEOMEC</h1>
     <p>Soluciones integrales en geotecnia, arquitectura, ingeniería civil y asesoría jurídica.</p>
+    <a href="mailto:ingeomec.contacto@gmail.com" class="cta-button">Solicita tu cotización gratuita</a>
   </header>
 
   <section id="nosotros">
